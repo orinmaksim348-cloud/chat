@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flet-chat-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python chat.py
+    envVars:
+      - key: INCEPTION_API_KEY
+        sync: false
